@@ -1,5 +1,14 @@
 {
+  "name": "socket-chat",
+  "version": "0.0.1",
+  "description": "Using socket to chat",
+  "type": "module",
   "dependencies": {
+    "axios": "^1.6.2",
+    "codemirror": "^5.65.16",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "highlight.js": "^11.9.0",
     "split.js": "^1.6.5"
   }
 }

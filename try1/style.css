@@ -241,7 +241,7 @@ div.toggle_chat_output{
 }
 
 div.chat a{
-    width: 48%;
+    width: 50%;
     height: inherit;
     line-height: 5vh;
     border-radius:5px;
@@ -255,9 +255,9 @@ div.chat a{
 div.chat a.active{
     background-color: #3b3b4f;
 }
-div.chat a#output_head {
+/* div.chat a#output_head {
     margin-left:4%;
-}
+} */
 
 div.chat a:hover{
     background-color: #ddd;

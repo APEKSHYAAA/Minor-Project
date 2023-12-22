@@ -34,9 +34,6 @@ username.addEventListener('input', function() {
 
 
 
-
-
-
 // Set the value of the input box from localStorage when the page loads
 window.onload = function() {
     var editor = CodeMirror(document.getElementById("code_with_highlight"), {
