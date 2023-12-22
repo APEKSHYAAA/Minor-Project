@@ -7,17 +7,27 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.6.0/split.min.js"></script>
     <script type="module" src="script.js"></script>
-</head>
+
+    <!-- for favicom -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
+
+    <!-- For highlighting -->
+    <script src="../node_modules/codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+    <script src="../node_modules/codemirror/mode/javascript/javascript.js"></script>
 <body>
     <!-- Top navigation bar -->
     <div class="nav" id="mynav">
         <a href="#cce_full" class="cce_full"><h1>Collaborative Code Editor</h1></a>
         <a href="#cce_short" class="cce_short"><h1>CCE</h1></a>
         <div class="right-flex">
-            <input name="name" type="text" id="username" placeholder=" Username ">
+            <input name="name" type="text" id="username" placeholder=" Username " autocomplete="on" autocapitalize="on"/>
             <div class ="toggle">
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="checkbox_slider">
                     <span class="slider"></span>
                 </label>
             </div>
@@ -26,13 +36,17 @@
     <div class="flexbox split">
         <div class="code" id="code-split">
             <h2>Code</h2>
-            <textarea placeholder = "Type your code here" spellcheck="false"></textarea>
+            <!-- <textarea  spellcheck="false" id="code">
+            </textarea> -->
+            <div id="code_with_highlight"></div>
         </div>
         
         
         <div class="output">
             Output
         </div>
+
+
         <div class="chat" id="chat-split">
             <div class="toggle_chat_output">
                 <a id="chat_head" href="#chat" class="active">Chat</h2></a>
@@ -49,8 +63,8 @@
             </div>
             <div class="message">
                 <form id = message_form>
-                    <input name="name" type="text" style="display:none">
-                    <input name = "message" type="text">
+                    <input name="name" type="text" style="display:none" id="input">
+                    <input name = "message" id ="message" type="text">
                     <input type="submit" id="send_button" value="Send">
                 </form>
             </div>

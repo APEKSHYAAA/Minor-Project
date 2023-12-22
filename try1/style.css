@@ -7,6 +7,7 @@
 body {
     background-color: gray;
     padding:10px;
+    overflow: hidden;
     /* padding-bottom: 5px; */
 }
 
@@ -172,13 +173,16 @@ input:checked + .slider:before {
     margin-top: 10px;
     border-radius: 20px;
     margin-bottom: 0px;
+    height: 89vh;
 }
 
 div.code {
     width: 45%;
     height: 84vh;
-    margin: 2.5%;
+    margin: 4vh;
     margin-bottom:0px;
+    display: flex;
+    flex-direction: column;
     /* resize: vertical; */
 }
 div.code h2{
@@ -187,30 +191,40 @@ div.code h2{
     line-height: 5vh;
     border: 1px solid whitesmoke;
     border-radius:5px;
-    margin-bottom: 10px;
+    margin-bottom: 2vh;
     color:whitesmoke;
     text-align: center;
 }
+#code_with_highlight {
+    height: 77vh;
+}
 
-div.code textarea{
+.CodeMirror {
+    max-height: 100%; /* or any other value */
+    overflow: auto;
+}
+/* div.code textarea{
     font-size:x-large;
     width: 99%;
-    height: 78vh;
     resize: none;
     background-color: #d2d2d2;
     border:none;
     outline:none;
     padding: 5px;
+    flex-grow:1;
 }
 
 div.code textarea:focus{
     border:none;
-    outline:none;
-}
+    outline:1px solid green;
+} */
 div.chat {
     width: 45%;
     height: 84vh;
-    margin: 2.5%;
+    margin: 4vh;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -221,7 +235,7 @@ div.toggle_chat_output{
     display:flex;
     height:5vh;
     overflow: hidden;
-    margin-bottom: 10px;;
+    margin-bottom: 2vh;;
 }
 
 div.chat a{
@@ -229,7 +243,6 @@ div.chat a{
     height: inherit;
     line-height: 5vh;
     border-radius:5px;
-    margin-bottom: 10px;
     color:whitesmoke;
     text-align: center;
     text-decoration: none;
@@ -255,13 +268,14 @@ div.chat a:active{
 
 div.chat-history{
     width: 99%;
-    height: 71vh;
+    height: 72vh;
+    flex-grow: 1;
     resize: none;
     background-color: #f3f3f3;
 }
 div.message {
     width: 100%;
-    height: 10vh;
+    /* height: 10vh; */
     margin-top: 2.5vh;
     overflow: hidden;
 }

@@ -33,6 +33,7 @@ http.createServer(function (request, response) {
         '.html': 'text/html',
         '.js': 'text/javascript',
         '.css': 'text/css',
+        '.png': 'image/png',
         // add more MIME types if needed
     };
 
