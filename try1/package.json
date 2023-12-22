@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "codemirror": "^5.65.16",
+    "express": "^4.18.2"
+  }
+}

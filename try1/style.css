@@ -274,6 +274,7 @@ div.chat-history{
     flex-grow: 1;
     resize: none;
     background-color: #f3f3f3;
+    overflow: auto;
 }
 div.message {
     width: 100%;
