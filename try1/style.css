@@ -200,8 +200,10 @@ div.code h2{
 }
 
 .CodeMirror {
+    width: 99%;
     max-height: 100%; /* or any other value */
     overflow: auto;
+    border-radius: 10px;
 }
 /* div.code textarea{
     font-size:x-large;
