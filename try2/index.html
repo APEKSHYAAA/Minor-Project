@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative code editor</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.6.0/split.min.js"></script>
+    <script type="module" src="script.js"></script>
+
+    <!-- for favicom -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
+
+    <!-- For highlighting -->
+    <script src="../node_modules/codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+    <script src="../node_modules/codemirror/mode/javascript/javascript.js"></script>
+<body>
+    <!-- Top navigation bar -->
+    <div class="nav" id="mynav">
+        <a href="#cce_full" class="cce_full"><h1>Collaborative Code Editor</h1></a>
+        <a href="#cce_short" class="cce_short"><h1>CCE</h1></a>
+        <div class="right-flex">
+            <input name="name" type="text" id="username" placeholder=" Username " autocomplete="on" autocapitalize="on"/>
+            <div class ="toggle">
+                <label class="switch">
+                    <input type="checkbox" id="checkbox_slider">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="flexbox split">
+        <div class="code" id="code-split">
+            <h2>Code</h2>
+            <!-- <textarea  spellcheck="false" id="code">
+            </textarea> -->
+            <div id="code_with_highlight"></div>
+        </div>
+        
+        
+        
+        
+        <div class="chat" id="chat-split">
+            <div class="toggle_chat_output">
+                <a id="chat_head" href="#chat" class="active">Chat</a>
+                <a id="output_head" href="#output">Output</a>
+            </div>
+            <div class="output" id="output">
+                
+            </div>
+            <div class = "chat-history" id="chat-history">
+                <!-- No messages yet. -->
+                <ul id="messages">
+                    <li style = "text-align: center; background-color : rgb(94, 94, 186)">Appu: Welcome to chat!</li>
+                </ul>
+            </div>
+            <div class="message" id="message_box">
+                <form id = message_form>
+                    <input name="name" type="text" style="display:none" id="input">
+                    <input name = "message" id ="message" type="text">
+                    <input type="submit" id="send_button" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>//don't remove
+        Split(['#code-split','#chat-split'],{
+            sizes: [70,30],
+            // minSize: 500,
+            gutterSize: 10,
+        })
+        // console.log("hello");
+    </script>
+</body>
+</html>
